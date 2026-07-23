@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    padding-bottom: 70px;
+    background-color: rgb(235, 235, 235);
+}
+
+header{
+    background-image: url("source/green.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Black Ops One';
+    font-size: clamp(15px, 2vw, 25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo image */
+header img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Navigation bar */
+nav{
+    background-color: rgb(37, 56, 83);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 20px;
+}
+
+/* Banner container */
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* Banner image */
+.container img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+/* Banner text */
+.center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Black Ops One';
+}
+
+main{
+    background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto auto auto;
+    margin: 20px;
+    min-height: 700px;
+    font-family: 'Josefin Sans';
+    font-size: 23px;
+    line-height: 33px;
+}
+
+/* Left area */
+section{
+    background-image: url("source/blue.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    margin-right: 5px;
+    padding: 20px;
+    color:rgb(255, 255, 255);
+}
+
+section h2{
+    text-align: center;
+}
+
+/* Profile image */
+section img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10%;
+    object-fit: cover;
+    display: block;
+    margin: 50px auto 80px;
+    border:2px solid rgb(255, 255, 255);
+}
+
+/* Right area */
+article{
+    background-color: rgb(62, 59, 59);
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content cards */
+.academic, .goals, .interests {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+}
+
+.academic{
+    background-color: rgb(228, 232, 243);
+}
+
+.goals{
+    background-color: rgb(204, 222, 243);
+}
+
+.interests{
+    background-color: rgb(171, 198, 224);
+}
+
+/* Cards hover effect */
+.academic:hover, .goals:hover, .interests:hover{
+    transform: scale(1.025);
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    align-self: flex-end;
+    margin: 20px;
+    background-color: rgb(218, 225, 235);
+    font-weight: bold;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+/* Button hover effect */
+button:hover{
+    transform: scale(1.15);
+    background-color: rgb(244, 248, 222);
+    box-shadow: 0 4px 15px gray;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    body{
+        padding-bottom: 40px;
+    }
+    
+    nav a{
+        margin: 5px;
+        font-size: 10px;
+    }
+
+    .center{
+        font-size: 13px;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    section{
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    section img{
+        margin: 20px auto 30px;
+    }
+
+    article{
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    footer{
+        font-size: 9px;
+        gap: 5px;
+        padding: 10px 5px;
+    }
+
+    footer img{
+        width: 18px;
+        height: 18px;
+    }
+}
