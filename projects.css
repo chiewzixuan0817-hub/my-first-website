@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    padding-bottom: 70px;
+    background-color: rgb(235, 235, 235);
+}
+
+header{
+    background-image: url("source/green.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Black Ops One';
+    font-size: clamp(15px, 2vw, 25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo image */
+header img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Navigation bar */
+nav{
+    background-color: rgb(37, 56, 83);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 20px;
+}
+
+main{
+    background-color: rgb(235, 235, 235);
+    margin: 20px;
+    min-height: 700px;
+    font-family: 'Josefin Sans';
+    font-size: 23px;
+    line-height: 33px;
+}
+
+section{
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px gray;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.skills, .projects, .timeline{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px;
+}
+
+.skills{
+    background-image: url("source/projects_blue.jpg");
+}
+
+.projects{
+    background-image: url("source/projects_blue2.jpg");
+}
+
+.timeline{
+    background-image: url("source/projects_blue3.jpg");
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Skill cards */
+.languages, .tools, .learning{
+    background-color: rgb(226, 235, 240);
+    border: 3px solid rgba(0, 0, 0, 0.325);
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.3s ease-out;
+}
+
+/* Hover effect for skill cards */
+.languages:hover, .tools:hover, .learning:hover{
+    transform: scale(1.025);
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Project cards */
+.project1, .project2{
+    background-color: rgb(212, 226, 242);
+    border: 3px solid rgba(0, 0, 0, 0.325);
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.3s ease-out;
+}
+
+/* Hover effect for project cards */
+.project1:hover, .project2:hover{
+    transform: scale(1.025);
+}
+
+.projects img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto 20px;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    transition: all 0.3s ease-out;
+}
+
+table:hover{
+    transform: scale(1.025);
+}
+
+table, th, td{
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Table header cells */
+th{
+    background-color: rgb(66, 102, 126);
+    color: white;
+}
+
+/* Table data cells */
+td{
+    background-color: rgb(223, 232, 239);
+}
+
+/* First column styling */
+td:first-child{
+    background-color: rgb(205, 215, 224);
+    font-weight: bold;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    body{
+        padding-bottom: 40px;
+    }
+    
+    nav a{
+        margin: 5px;
+        font-size: 10px;
+    }
+
+    main{
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 15px;
+    }
+
+    .languages, .tools, .learning{
+        padding: 10px;
+    }
+
+    .skills-grid, .projects-grid{
+        grid-template-columns: 1fr;
+    }
+
+    footer{
+        font-size: 9px;
+        gap: 5px;
+        padding: 10px 5px;
+    }
+
+    footer img{
+        width: 18px;
+        height: 18px;
+    }
+}
